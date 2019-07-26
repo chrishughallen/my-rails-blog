@@ -13,13 +13,8 @@ class ArticlesController < ApplicationController
 	 def create
 	    @article = Article.new(article_params)
 
-	    respond_to do |format|
-	      if @article.save
-	        format.html { redirect_to @article, notice: "Article created!" }
-	      else
-	        format.html { render action: 'new' }
-	      end
-	    end
+	    @article.save
+	    redirect_to @article
 	  end
 
 	def show

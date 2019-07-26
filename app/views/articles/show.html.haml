@@ -1,0 +1,9 @@
+%div{ class: 'article__wrapper'}
+  %p{ class: 'article__title'}
+    #{@article.title}
+  %p{ class: 'article__description'}
+    #{@article.description}
+    %button{ class: 'edit-article-btn' }= link_to 'Edit', edit_article_path(@article)
+    %button{ class: 'delete-article-btn' }= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you sure?" } 
+
+%button{ class: 'show-all-button' }= link_to 'Home', articles_path

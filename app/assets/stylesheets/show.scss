@@ -1,0 +1,18 @@
+* {
+	font-family: sans-serif;
+}
+
+.article__wrapper {
+	transition: all ease .2s;
+	padding: 25px;
+	&:hover {
+		background: azure;
+		transition: all ease .2s;
+		padding-left: 30px;
+	}
+	.article__title {
+		color: darkgrey;
+		font-size: 2rem;
+	}
+
+}
